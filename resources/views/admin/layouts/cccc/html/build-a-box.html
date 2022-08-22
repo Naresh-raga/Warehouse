@@ -1,0 +1,1270 @@
+
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16" />
+    <title>The Nutritious Dog </title>
+
+    <!--------Jqurey min css-------->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--------Style css-------->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/chosen.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!--------Style css-------->
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!--------Fontawesome css-------->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        #msform {
+            text-align: center;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: #000;
+        }
+
+            #progressbar .active {
+                color: #ffd012;
+            }
+
+            #progressbar li {
+                list-style-type: none;
+                font-size: 15px;
+                width: 25%;
+                float: left;
+                position: relative;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            /*Icons in the ProgressBar*/
+            #progressbar #account:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f007";
+                font-weight: 900;
+            }
+
+            #progressbar #personal:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f6d3";
+                font-weight: 900;
+            }
+
+            #progressbar #payment:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f0c5";
+                font-weight: 900;
+            }
+
+            #progressbar #confirm:before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f09d";
+                font-weight: 900;
+            }
+            /*Icon ProgressBar before any progress*/
+            #progressbar li:before {
+                width: 50px;
+                height: 50px;
+                line-height: 45px;
+                display: block;
+                font-size: 20px;
+                color: #ffffff;
+                background:#000;
+                border-radius: 50%;
+                margin: 0 auto 10px auto;
+                padding: 2px;
+            }
+            /*ProgressBar connectors*/
+            #progressbar li:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                left: 0;
+                top: 25px;
+                z-index: -1;
+            }
+            /*Color number of the step and the connector before it*/
+            #progressbar li.active:before, #progressbar li.active:after {
+                background: #ffde59;
+            }
+        .lead-form-card .card{border:none;}
+    </style>
+</head>
+
+<body id="animsition">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Pet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="add-pet">
+                        <h4>Dog Name</h4>
+                        <button class="form-wizard-previous-btn float-left btn-main">Add new pet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!------ Header Start ------->
+    <header class="header-rw">
+        <div class="max-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="menubar">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/images/logo.png" alt="logo" height="70" />
+                        </a>
+                        <!-- Menu Bar -->
+                        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+
+                            <!-- Nav Toggle Button -->
+                            <button class="navbar-toggler my-2" id="navbarSideCollapse" type="button" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <!-- Nav Links -->
+                            <div class="navbar-collapse offcanvas-collapse justify-content-center lh-lg" id="navbarSideCollapse">
+                                <ul class="navbar-nav p-3 p-md-0 ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="why-tnd.html">Why TND</a>
+                                    </li>
+                                    <li class="nav-item"> <a class="nav-link" href="our-ingredients.html"> Our Ingredients</a> </li>
+                                    <li class="nav-item dropdown ktm-mega-menu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About us</a>
+                                        <div class="dropdown-menu mega-menu rounded-0 border-0 shadow-sm p-3">
+                                            <ul>
+                                                <li>
+                                                    <a href="our-story.html">Our Story  </a>
+                                                </li>
+                                                <li>
+                                                    <a href="our-food.html">Our food</a>
+                                                </li>
+                                                <li>
+                                                    <a href="faq.html">Faq </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item"> <a class="nav-link active" href="build-a-box.html">Build A Box</a> </li>
+                                    <!----<li class="nav-item"> <a class="nav-link" href="shop.html">Shop</a> </li>-->
+                                    <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact US</a> </li>
+                                    <li class="nav-item"> <a class="nav-link" href="login.html">Log In</a> </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Ends -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!------ Header Start ------->
+    <!------ Banner Part -------->
+    <section class="banner inner-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="banner-text">
+                        <h1>
+                            build a box
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------ Banner Part -------->
+    <div class="container mrt-100 mrb-100">
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active tab_1 form-tabs" id="account"><strong>Me</strong></li>
+                <li id="personal" class="tab_2 form-tabs"><strong>My Dogs</strong></li>
+                <li id="payment" class="tab_3 form-tabs"><strong>Your plan</strong></li>
+                <li id="confirm" class="tab_4 form-tabs"><strong>Checkout</strong></li>
+            </ul>
+            <div class="lead-form-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="step-body">
+                            <div class="step-1 steps f-direction" id="step_1">
+                                <div class="frm-group-sub-head">
+                                    <h5>Better food starts here.</h5>
+                                    <p>Let’s determine your recommended recipes, meal plan, and weekly price!</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-group-inner">
+                                        <label for="fname">I have</label>
+                                        <input type="text" class="form-control w-80" id="fname" placeholder="0" />
+                                        <label for="dname" class="wizard-form-text-label mrt15">dog named, </label>
+                                        <!-----
+                             <input type="text" class="form-control w-180" id="fname1" placeholder="Pet’s name">
+                        <label for="and" class="wizard-form-text-label">and</label>
+                        <input type="text" class="form-control w-180 mrt-30" id="fname1" placeholder="Pet’s name"> <span class="saprator">,</span>
+                        <input type="text" class="form-control w-180 mrt-30" id="fname1" placeholder="Pet’s name"> <span class="saprator">,</span>
+                        <input type="text" class="form-control w-180 mrt-30" id="fname1" placeholder="Pet’s name">
+                           -->
+                                    </div>
+                                    <div class="form-group-inner">
+                                        <label for="lname" class="wizard-form-text-label">We live in pin code</label>
+                                        <input type="text" class="form-control w-140" id="lname" />
+                                        <p class="cr-only">We currently only serve to Jaipur</p>
+                                    </div>
+                                    <div class="form-group-inner">
+                                        <label for="mmobile" class="wizard-form-text-label">My mobile number is</label>
+                                        <input type="text" class="form-control w-180" id="mmobile" />
+                                    </div>
+                                    <div class="form-group-inner">
+                                        <label for="memail" class="wizard-form-text-label">And my e-mail is</label>
+                                        <input type="text" class="form-control" id="memail" />
+                                        <p class="cr-only">You can use your e-mail to access your recommendations anytime.</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="step-2 steps" id="step_2" style="display:none">
+                                <div class="frm-group-sub-head">
+                                    <p>Tell us a little more about <b>Dog Name...</b></p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group-inner">
+                                        <select class="w-140">
+                                            <option>He</option>
+                                            <option>She</option>
+                                        </select>
+                                        <label for="dname" class="wizard-form-text-label mrt15">is</label>
+                                        <input type="text" class="form-control w-80 mrt-30" id="fname1" placeholder="0" />
+                                        <select class="w-140">
+                                            <option>Months</option>
+                                            <option>Years</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group-inner">
+                                        <label for="dname" class="wizard-form-text-label mrt15">He</label>
+                                        <select class="w-140">
+                                            <option>is</option>
+                                            <option>is not</option>
+                                        </select>
+                                        <label for="dname" class="wizard-form-text-label mrt15">neutered and weighs about</label>
+                                        <input type="text" class="form-control w-80 mrt-30" id="fname1" placeholder="0" />
+                                        <label for="dname" class="wizard-form-text-label mrt15">kg</label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="dname" class="wizard-form-text-label mrt15">and is the cutest</label>
+                                    <select class="multipleChosen w-180" multiple="true">
+                                        <option value="1">Excellent</option>
+                                        <option value="2">Very Good</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Not Bad</option>
+                                        <option value="5">Bad</option>
+                                        <option value="6">Very Bad</option>
+                                    </select>
+                                    <label for="dname" class="wizard-form-text-label mrt15">ever.</label>
+                                </div>
+                                <div class="form-group text-center">
+                                    <h4 class="ch-dg"><b>Dog name</b> body is…</h4>
+                                    <div class="cc-selector-2">
+
+                                        <div class="ch-ra">
+                                            <input id="visa2" type="radio" name="creditcard-s" value="visa" class="visa2-s" />
+                                            <label class="drinkcard-cc visa mrb-50" for="visa2"></label>
+                                            <label class="sp" for="visa2">Too skinny</label>
+                                        </div>
+                                        <div class="ch-ra">
+                                            <input id="mastercard2" type="radio" name="creditcard-s" value="mastercard" class="visa2-s" />
+                                            <label class="drinkcard-cc mastercard mrb-50" for="mastercard2"></label>
+                                            <label class="sp" for="mastercard2">Just right</label>
+                                        </div>
+
+                                        <div class="ch-ra">
+                                            <input id="mastercard3" type="radio" name="creditcard-s" value="mastercard3" class="visa2-s" />
+                                            <label class="drinkcard-cc mastercard3 mrb-50" for="mastercard3"></label>
+                                            <label class="sp" for="mastercard3">Rounded</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group text-center" id="show-me" style="display:none;">
+                                    <h4 class="ch-dg  mrt-100"><b>Dog name</b> activity level…</h4>
+                                    <div class="cc-selector-2 cc-selector-bottom">
+
+                                        <div class="ch-ra">
+                                            <input id="nv-active" type="radio" name="creditcard1" value="nv-active" />
+                                            <label class="sp" for="nv-active">Not very active</label>
+                                        </div>
+                                        <div class="ch-ra">
+                                            <input id="active-d" type="radio" name="creditcard1" value="active-d" />
+                                            <label class="sp" for="active-d">Active</label>
+                                        </div>
+
+                                        <div class="ch-ra">
+                                            <input id="v-active" type="radio" name="creditcard1" value="v-active" />
+                                            <label class="sp" for="v-active">Very active</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group pdt-100">
+                                    <div class="form-group-inner">
+                                        <label for="dname" class="wizard-form-text-label mrt15">Dog Name</label>
+                                        <select class="w-140">
+                                            <option>has</option>
+                                            <option>doesn't have </option>
+                                        </select>
+                                        <label for="dname" class="wizard-form-text-label mrt15">any allergies.</label>
+                                    </div>
+                                    <div class="form-group-inner">
+                                        <label for="dname" class="wizard-form-text-label mrt15">Dog name mainly eats</label>
+                                        <select class="w-140">
+                                            <option>Dry food</option>
+                                            <option>Wet food </option>
+                                            <option>Raw food</option>
+                                            <option>Home cooked </option>
+                                            <option>Freeze dried</option>
+                                            <option>Fresh food</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               
+                                <!----  <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">home</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Profile</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Contact</div>
+    </div>-->
+                                <div class="has-allergies">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" value="" name="" id="allergies_1" />
+                                                <span>Coconut Oil</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="step-3 steps" id="step_3" style="display:none">
+                                <div class="frm-group-sub-head w-650">
+                                    <h5>Plans as perfect as Dog Name.</h5>
+                                    <p>We’ve selected three fresh recipes packed with whole foods and natural nutrients, perfect for a 10 kg, 12 yr old Affenpinscher.</p>
+                                    <a href="javascript:void(0)" class="btn-main" data-bs-toggle="modal" data-bs-target="#exampleModal">Another Pet?</a>
+                                </div>
+                                <div class="select-plan">
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <img src="assets/images/food-1.png" alt="food-1" />
+                                        </div>
+
+                                        <div class="plan-des">
+                                            <div>
+                                                <div class="plan-head">
+                                                    <h4>
+                                                        Chomp Chomp Chicken
+                                                    </h4>
+                                                </div>
+                                                <p>Prepared in FSSAI grade kitchens with fresh chicken and vegetables, rightly balanced and pre-portioned for Dog name.</p>
+                                            </div>
+                                            <div>
+                                                <a href="javacript:void(0)">See Details</a>
+                                                <p class="plan-quantity">Quantity:<span>363.08 g/dy</span></p>
+                                                <div class="plan-footer">
+                                                    <input type="checkbox" value="" name="" checked=checked id="ch-1" /> <label for="ch-1">Added (5/3)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <img src="assets/images/food-2.png" alt="food-2" />
+                                        </div>
+
+                                        <div class="plan-des">
+                                            <div>
+                                                <div class="plan-head">
+                                                    <h4>
+                                                        Scrummy Buffalo
+                                                    </h4>
+                                                </div>
+                                                <p>Prepared in FSSAI grade kitchens with fresh buffalo, vegetables, and other ingredients, rightly balanced and pre-portioned for Dog name.</p>
+                                            </div>
+                                            <div>
+                                                <a href="javacript:void(0)">See Details</a>
+                                                <p class="plan-quantity">Quantity: <span>292.08 g/dy</span></p>
+                                                <div class="plan-footer">
+                                                    <input type="checkbox" value="" name="" checked=checked id="ch-2" /> <label for="ch-2">Added (5/3)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <img src="assets/images/food-1.png" alt="food-1" />
+                                        </div>
+
+                                        <div class="plan-des">
+                                            <div>
+                                                <div class="plan-head">
+                                                    <h4>
+                                                        Bowl-icious Mutton
+                                                    </h4>
+                                                </div>
+                                                <p>Prepared in FSSAI grade kitchens with fresh mutton and vegetables, rightly balanced and pre-portioned for dsdf.</p>
+                                            </div>
+                                            <div>
+                                                <a href="javacript:void(0)">See Details</a>
+                                                <p class="plan-quantity">Quantity: <span>265.47 g/dy</span></p>
+                                                <div class="plan-footer">
+                                                    <input type="checkbox" value="" name="" checked=checked id="ch-3" /> <label for="ch-3">Added (5/3)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <img src="assets/images/food-1.png" alt="food-1" />
+                                        </div>
+
+                                        <div class="plan-des">
+                                            <div>
+                                                <div class="plan-head">
+                                                    <h4>
+                                                        Squashy Duckduck
+                                                    </h4>
+                                                </div>
+                                                <p>Prepared in FSSAI grade kitchens with fresh duck and vegetables, rightly balanced and pre-portioned for dsdf.</p>
+                                            </div>
+                                            <div>
+                                                <a href="javacript:void(0)">See Details</a>
+                                                <p class="plan-quantity">Quantity: <span>329.38 g/dy</span></p>
+                                                <div class="plan-footer">
+                                                    <input type="checkbox" value="" name="" checked=checked id="ch-4" /> <label for="ch-4">Added (5/3)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <img src="assets/images/food-1.png" alt="food-1" />
+                                        </div>
+
+                                        <div class="plan-des">
+                                            <div>
+                                                <div class="plan-head">
+                                                    <h4>
+                                                        Lip Licking Pork
+                                                    </h4>
+                                                </div>
+                                                <p>Prepared in FSSAI grade kitchens with fresh pork and vegetables, rightly balanced and pre-portioned for dsdf.</p>
+                                            </div>
+                                            <div>
+                                                <a href="javacript:void(0)">See Details</a>
+                                                <p class="plan-quantity">Quantity: <span>269.71 g/dy</span></p>
+                                                <div class="plan-footer">
+                                                    <input type="checkbox" value="" name="" checked=checked id="ch-5" /> <label for="ch-5">Added (5/3)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="plan-1">
+                                        <div class="plan-img">
+                                            <div class="pl-imgs">
+                                                <img src="assets/images/food-1.png" alt="food-1" />
+                                            </div>
+                                            <div class="pl-imgs">
+                                                <img src="assets/images/food-2.png" alt="food-2" />
+                                            </div>
+                                            <div class="pl-imgs">
+                                                <img src="assets/images/food-3.png" alt="food-3" />
+                                            </div>
+                                            <div class="pl-imgs">
+                                                <img src="assets/images/food-4.png" alt="food-4" />
+                                            </div>
+                                            <div class="pl-imgs">
+                                                <img src="assets/images/food-5.png" alt="food-5" />
+                                            </div>
+                                        </div>
+                                        <div class="plan-head">
+                                            <h4>
+                                                Dog name subscription plan
+                                            </h4>
+                                        </div>
+                                        <div class="plan-des">
+                                            <p>
+                                                7 meal pouches with following recipes will be shipped every week to your home
+                                            </p>
+                                            <p class="plan-quantity pd-10">Recipes</p>
+                                            <p>Chomp Chomp Chicken</p>
+                                            <p>Scrummy Buffalo</p>
+                                            <p>Bowl-icious Mutton</p>
+                                            <p>Squashy Duckduck</p>
+                                            <p>Lip Licking Pork</p>
+                                            <p class="plan-quantity pd-10">Plan <span>Full Meals</span></p>
+                                            <p class="plan-quantity pd-10">Price Starts from <span><strike>Rs. 919.48 /week</strike> Rs. 687.24 /week</span></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="full-plan mrt-100">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="pl-details">
+                                                <div class="heading">
+                                                    <img src="assets/images/heading-icon.jpg" alt="favicon" />
+                                                    <h3>Full Plan</h3>
+                                                    <p>Replace your pup’s everyday meals entirely with fresh Poonch food. (Recommended to keep your dog’s healthy, fit, and active)</p>
+                                                </div>
+                                                <div class="pl-des">
+                                                    <button type="button" value="" name="" class="form-wizard-next-btn float-right btn-main">
+                                                        select plan
+                                                    </button>
+                                                    <div class="wl">
+                                                        <span>Weekly Price</span>
+                                                        <span>
+                                                            <strike> Rs. 1836.58 </strike> Rs. 1372.63
+                                                        </span>
+                                                    </div>
+                                                    <div class="wl">
+                                                        <span>Shipping</span>
+                                                        <span>
+                                                            <b>FREE</b>
+                                                        </span>
+                                                    </div>
+                                                    <div class="pl-imges">
+                                                        <img src="assets/images/plan-1.webp" alt="plan-1" />
+                                                        <p>You will be able to edit plan preferences after checkout.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="pl-details">
+                                                <div class="heading">
+                                                    <img src="assets/images/heading-icon.jpg" alt="favicon" />
+                                                    <h3>Top-up Plan</h3>
+                                                    <p>Mix a portion of fresh Poonch food with your dog’s regular meals and serve them right away!</p>
+                                                </div>
+                                                <div class="pl-des">
+                                                    <button type="button" value="" name="" class="form-wizard-next-btn float-right btn-main">
+                                                        select plan
+                                                    </button>
+                                                    <div class="wl">
+                                                        <span>Weekly Price</span>
+                                                        <span>
+                                                            <strike>Rs. 919.48 </strike> Rs. 687.24
+                                                        </span>
+                                                    </div>
+                                                    <div class="wl">
+                                                        <span>Shipping</span>
+                                                        <span>
+                                                            <b>FREE</b>
+                                                        </span>
+                                                    </div>
+                                                    <div class="pl-imges">
+                                                        <img src="assets/images/plan-2.webp" alt="plan-2" />
+                                                        <p>You will be able to edit plan preferences after checkout.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-cost mrt-100">
+                                    <div class="heading">
+                                        <img src="assets/images/heading-icon.jpg" alt="favicon" />
+                                        <h3>How much does Poonch Food cost?</h3>
+                                        <p>
+                                            Let's compare to some other everyday purchases.
+
+                                        </p>
+                                    </div>
+                                    <div class="img-big">
+                                        <img src="assets/images/food-1.png" alt="food-1" />
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pk-rw mrt-100">
+                                    <div class="pk-rw-inner">
+                                        <div class="pk-img">
+                                            <img src="assets/images/pk-1.png" alt="pk-1" />
+                                        </div>
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+
+                                        </div>
+                                        <h6>Orijen</h6>
+                                    </div>
+                                    <div class="pk-rw-inner">
+                                        <div class="pk-img">
+                                            <img src="assets/images/pk-2.png" alt="pk-2" />
+                                        </div>
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+
+                                        </div>
+                                        <h6>Orijen</h6>
+                                    </div>
+                                    <div class="pk-rw-inner">
+                                        <div class="pk-img">
+                                            <img src="assets/images/pk-3.png" alt="pk-3" />
+                                        </div>
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+
+                                        </div>
+                                        <h6>Orijen</h6>
+                                    </div>
+                                    <div class="pk-rw-inner">
+                                        <div class="pk-img">
+                                            <img src="assets/images/pk-4.png" alt="pk-4" />
+                                        </div>
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+
+                                        </div>
+                                        <h6>Orijen</h6>
+                                    </div>
+                                    <div class="pk-rw-inner">
+                                        <div class="pk-img">
+                                            <img src="assets/images/pk-5.png" alt="pk-5" />
+                                        </div>
+                                        <div class="img-big-s">
+                                            <p>
+                                                <b> ₹80.24</b>
+                                                <span>per meal</span>
+                                            </p>
+
+                                        </div>
+                                        <h6>Orijen</h6>
+                                    </div>
+                                </div>
+                                <div class="f-cost mrt-100">
+                                    <div class="heading">
+                                        <img src="assets/images/heading-icon.jpg" alt="favicon" />
+                                        <h3>Healthier Portions of Meals That Are Easy For You Too!</h3>
+                                    </div>
+                                    <div class="row w-1000">
+                                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                            <div class="meal-img">
+                                                <img src="assets/images/pk-1.png" alt="pk-1" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                                            <div class="meal-des">
+                                                <div class="heading">
+                                                    <h3>Experts Approve Poonch</h3>
+                                                </div>
+                                                <p>We know how much your pets mean to you. So, we partnered we veterinary nutritionists to create fresh recipes for every dog. We follow all AAFCO standards and cook our meals in FSSAI grade kitchens to deliver the most high-quality diets.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-cost mrt-100">
+                                    <div class="row w-1000">
+                                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                            <div class="meal-img">
+                                                <img src="assets/images/pk-2.png" alt="pk-2" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                                            <div class="meal-des">
+                                                <div class="heading">
+                                                    <h3>Visible Health Benefits</h3>
+                                                </div>
+                                                <p>Starting with fresh food comes with a number of health improvements for every dog- improved digestion, good skin and shinier coat, a stronger immune system, better poop, and increased vitality.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-cost mrt-100">
+                                    <div class="row w-1000">
+                                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                            <div class="meal-img">
+                                                <img src="assets/images/pk-3.png" alt="pk-3" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                                            <div class="meal-des">
+                                                <div class="heading">
+                                                    <h3>Easy to Serve</h3>
+                                                </div>
+                                                <p>We portion the meals as per every dog’s caloric requirements. Every pack is pre-made and ready to serve directly to your pup’s. Take the pack out of the refrigerator, tear it up, and pour it into the bowl with a pinch of love.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f-cost mrt-100">
+                                    <div class="row w-1000">
+                                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                            <div class="meal-img">
+                                                <img src="assets/images/pk-4.png" alt="pk-4" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                                            <div class="meal-des">
+                                                <div class="heading">
+                                                    <h3>Delivery Right At Your Doorstep</h3>
+                                                </div>
+                                                <p>You need not go to the market to buy processed food for your dogs anymore! Just place your order and we’ll deliver fresh food directly to your home. You’ll receive the food on a regular schedule with flexible subscription options.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-4 steps" id="step_4" style="display:none">
+                                <div class="payment-info w-1000">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                                            <div class="frm-group-sub-head">
+                                                <h5>1. Shipping Address</h5>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="f-name">First name</label>
+                                                        <input type="text" value="" name="" placeholder="Enter first name..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="l-name">Last name</label>
+                                                        <input type="text" value="" name="" placeholder="Enter last name..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <div class="form-group  mrt-0">
+                                                        <label for="f-address">Address</label>
+                                                        <textarea placeholder="Enter your adress..." class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="h-name">House no/flat no/street name</label>
+                                                        <input type="text" value="" name="" placeholder="Enter House no/flat no/street..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="la-name">Landmark (Optional)</label>
+                                                        <input type="text" value="" name="" placeholder="Enter Landmark (Optional)..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="c-name">city</label>
+                                                        <input type="text" value="" name="" placeholder="Enter ciry name..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="s-name">State</label>
+                                                        <input type="text" value="" name="" placeholder="Enter state name..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="p-name">Pincode</label>
+                                                        <input type="text" value="" name="" placeholder="Enter pincode..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="frm-group-sub-head">
+                                                <h5>2. Account Information</h5>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="e-mail">email</label>
+                                                        <input type="text" value="" name="" placeholder="Enter pincode..." class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <div class="form-group mrt-0">
+                                                        <label for="m-mobile">Mobile</label>
+                                                        <input type="text" value="" name="" placeholder="Enter pincode..." class="form-control" />
+                                                        <p class="f-13">All order updates will be sent as WhatsApp notifications to the above number</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="frm-group-sub-head">
+                                                <h5>3. Billing information</h5>
+                                            </div>
+                                            <div class="credit-card-info  mrt-30">
+                                                <div class="top-card">
+                                                    <div class="radio">
+                                                        <input id="radio-1" name="tab" type="radio" value="igottwo" onclick="show2();" checked=checked />
+                                                        <label for="radio-1" class="radio-label">Credit Card</label>
+                                                    </div>
+                                                    <div class="cr-imgs">
+                                                        <img src="assets/images/visa.png" alt="visa" height="20" />
+                                                        <img src="assets/images/master.png" alt="master" height="20" />
+                                                        <img src="assets/images/american.png" alt="american" height="20" />
+                                                        <img src="assets/images/discover.png" alt="discover" height="20" />
+                                                        <img src="assets/images/Diners-Club.png" alt="Diners-Club" height="20" />
+                                                        <img src="assets/images/jcb.png" alt="jcb" height="20" />
+                                                    </div>
+                                                </div>
+                                                <div class="card-number" id="div1">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <div class="form-group mrt-0">
+                                                                <label for="c-number">Card number</label>
+                                                                <input type="text" value="" name="" placeholder="Enter card number..." class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                            <div class="form-group mrt-0">
+                                                                <label for="mmyy">MM/YY</label>
+                                                                <input type="text" value="" name="" placeholder="Enter mm/yy..." class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                            <div class="form-group mrt-0">
+                                                                <label for="cvv">CVV</label>
+                                                                <input type="text" value="" name="" placeholder="Enter cvv number..." class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="top-card">
+                                                    <div class="radio">
+                                                        <input id="radio-2" name="tab" type="radio" value="igotnone" onclick="show1();" />
+                                                        <label for="radio-2" class="radio-label">Razorpay (Cards, UPI,</label>
+                                                        <label for="radio-2" class="radio-label" style="padding-left:34px;">NetBanking, Wallets)</label>
+                                                    </div>
+                                                    <div class="cr-imgs">
+                                                        <img src="assets/images/pay_methods_branding.png" alt="pay_methods_branding" height="18" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <p class="f-13 pd-10">Your subscription will be renewed automatically if your bank supports it. You can turn off the auto-renewal from the subscribed dashboard anytime.</p>
+                                            <div class="strip-me">
+                                                <div class="st-img">
+                                                    <img src="assets/images/download.png" alt="download" height="70" />
+                                                </div>
+                                                <div class="st-des">
+                                                    <p><b>100% money-back guarantee</b></p>
+                                                    <p> If your pup doesn't like our food, we'll fully refund your first box.</p>
+                                                </div>
+                                            </div>
+                                            <div class="strip-me strip-me-bottom">
+                                                <div class="st-img">
+                                                    <img src="assets/images/stripe.png" alt="stripe" height="20" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                            <div class="or-summery">
+                                                <div class="frm-group-sub-head">
+                                                    <h5>Order summary</h5>
+                                                </div>
+                                                <div class="or-prv">
+                                                    <div class="pr-tp">
+                                                        <a href="javascript:void(0)"><i class="fas fa-pen"></i> Edit</a>
+                                                        <h6>
+                                                            dsdf's one-week
+                                                            starter box
+                                                        </h6>
+                                                        <p>Rs.1372.63/week</p>
+                                                    </div>
+
+                                                    <div class="prd">
+                                                        <p> <b>5 Recipes:</b>Chomp Chomp Chicken ,Scrummy Buffalo ,Bowl-icious Mutton ,Squashy Duckduck ,Lip Licking Pork .</p>
+                                                        <p> <b>Daily Portion:</b>Full Plan</p>
+                                                    </div>
+                                                    <div class="sl-pt">
+                                                        <span>SELECT ANOTHER PET</span>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <div class="pr-rw-left">
+                                                            <input type="text" value="" name="" placeholder="Enter promo code.." />
+                                                        </div>
+                                                        <div class="pr-rw-right">
+                                                            <button type="submit" value="" name="" class="btn-main">Apply</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <div class="pr-rw-left">
+                                                            Subtotal
+                                                        </div>
+                                                        <div class="pr-rw-right">
+                                                            Rs.1372.63
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <div class="pr-rw-left">
+                                                            Shipping
+                                                        </div>
+                                                        <div class="pr-rw-right">
+                                                            Always Free
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <div class="pr-rw-left">
+                                                            Discount
+                                                        </div>
+                                                        <div class="pr-rw-right">
+                                                            Rs.0
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <div class="pr-rw-left">
+                                                            Today's Total
+                                                        </div>
+                                                        <div class="pr-rw-right">
+                                                            <h4>Rs.1372.63</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <button type="submit" value="" name="" class="btn-main"> checkout <i class="fas fa-lock"></i></button>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <p>By checking out you agree to our <a href="terms-and-conditions.html">Terms & Conditions</a>. Poonch is a subscription automatically billed to your preferred payment method. You can cancel or adjust your account anytime.</p>
+                                                    </div>
+                                                    <div class="promo-code-rw">
+                                                        <a href="privacy-policy.html">Privacy Policy </a>
+                                                        <a href="terms-and-conditions.html">Terms </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ch-bt-rw">
+                                    <div class="ch-price">Rs. 1372.63/week</div>
+                                    <div class="ch-btn">
+                                        <button type="submit" value="" name="" class="form-wizard-submit float-right btn-main"> checkout <i class="fas fa-lock"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button type="button" class="btn pre-btn btn-main" style="display:none">Previous</button>
+                            <button type="button" class="btn next-btn btn-main">Continue</button>
+                            <button type="submit" class="btn success-btn btn-main" style="display:none">Submit</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+        </form>
+    </div>
+
+    <!------ Footer ------->
+    <footer class="footer-rw">
+        <div class="newsletter mrb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h4>
+                            Stay in the loop with the nutritious dog and
+                            we'll dish up 5% off your first delivery!
+                        </h4>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="newsletter-form">
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="text" value="" name="" placeholder="Email..." />
+                                <button type="submit" value="submit" name="">Join Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inner mrb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="footer-head">
+                            <h4>company</h4>
+                        </div>
+                        <div class="quick-links">
+                            <ul>
+                                <li>
+                                    <a href="our-story.html">About Us</a>
+                                </li>
+                                <!--  <li>
+                                      <a href="shop.html">Shop</a>
+                                  </li>-->
+                                <!-- <li>
+                                     <a href="blog.html">Blog</a>
+                                 </li>-->
+                                <li>
+                                    <a href="build-a-box.html">Build A Box</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="footer-head">
+                            <h4>Policies</h4>
+                        </div>
+                        <div class="quick-links">
+                            <ul>
+                                <li>
+                                    <a href="terms-and-conditions.html">Terms And Condition’s</a>
+                                </li>
+                                <li>
+                                    <a href="refund-policy.html">Refund Policy</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                </li>
+                                <!--<li>
+                                    <a href="shipping-details.html">Shipping Details</a>
+                                </li>
+                                <li>
+                                    <a href="join-our-pack.html">Join Our Pack</a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="footer-head">
+                            <h4>Connect With Us</h4>
+                        </div>
+                        <div class="quick-links">
+                            <ul>
+                                <li>
+                                    <a href="mailto:info@thenutritiousdog.com">info@thenutritiousdog.com</a>
+                                </li>
+                                <li>
+                                    <a href="tel:+000000000">+000 000 000</a>
+                                </li>
+                                <li>
+                                    <a href="">397, Ram Vihar, Gopal Pura Mode, Jaipur</a>
+                                </li>
+                                <li>
+                                    <div class="social-media">
+                                        <a href="" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="" target="_blank">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="" target="_blank">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <p>Copyright © 2022 The Nutritious Dog. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!------ Footer ------->
+
+    <div class="calltoaction-res">
+        <a target="_blank" href="//api.whatsapp.com/send?phone=+91 8504962445&amp;text=Welcome to The Nutritious D.O.G." class="wh-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <a href="javascript:void(0)" id="scroll" style="display: none;"><span></span></a>
+    <!------ Footer ---------->
+    <!------Jquery min js---->
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+
+    <!------Proper min js---->
+    <script src="assets/js/popper.min.js" type="text/javascript"></script>
+
+    <!------Bootstrap min js---->
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+    <script src="assets/js/script.js" type="text/javascript"></script>
+    <script>
+        $('.next-btn').on('click', function () {
+            var currentStep = $('.steps:visible').attr('id');
+            var intValue = currentStep.replace(/[^\d.]/g, '');
+            var nextStep = parseInt(intValue) + 1;
+
+            $('#' + currentStep).hide();
+            $('#step_' + nextStep).show();
+
+            $('.form-tabs').removeClass('active');
+            $('.tab_' + nextStep).addClass('active');
+
+            if (nextStep == 4) {
+                $('.success-btn').show();
+                $('.next-btn').hide();
+                $('.pre-btn').show();
+            } else {
+                $('.success-btn').hide();
+                $('.next-btn').show();
+                $('.pre-btn').show();
+            }
+        });
+
+        $('.pre-btn').on('click', function () {
+            var currentStep = $('.steps:visible').attr('id');
+            var intValue = currentStep.replace(/[^\d.]/g, '');
+            var preStep = parseInt(intValue) - 1;
+
+            $('#' + currentStep).hide();
+            $('#step_' + preStep).show();
+
+            $('.form-tabs').removeClass('active');
+            $('.tab_' + preStep).addClass('active');
+
+            if (preStep == 1) {
+                $('.success-btn').hide();
+                $('.next-btn').show();
+                $('.pre-btn').hide();
+            } else {
+                $('.success-btn').hide();
+                $('.next-btn').show();
+                $('.pre-btn').show();
+            }
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+        //Scroll Bottom
+        $('#goToBottom').click(function () {
+
+            var WH = $(window).height();
+            var SH = $('body').prop("scrollHeight");
+            $('html, body').stop().animate({ scrollTop: SH - WH }, 600);
+
+        });
+    </script>
+    <script src='assets/js/chosen.jquery.min.js' type="text/javascript"></script>
+    <script src='assets/js/js/select2.min.js' type="text/javascript"></script>
+</body>
+</html>
+
